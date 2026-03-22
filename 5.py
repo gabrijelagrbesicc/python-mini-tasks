@@ -28,3 +28,29 @@ for broj in range(21):
     if lista.count(broj) >= 2:
         print(broj, " se ponavlja ",lista.count(broj)," puta")
 """
+
+"""
+Napiši program koji:
+generira listu od 100 brojeva (1–10) pronalazi i ispisuje broj koji se najviše puta pojavljuje"""
+
+import random
+
+lista = []
+
+for i in range(100):
+    lista.append(random.randint(0,10))
+
+print("Lista: ", lista)
+
+maxBroj=0
+maxPon=0
+
+for broj in range(11):
+    brojac = lista.count(broj)
+
+    if(brojac > maxPon):
+        maxPon = brojac
+        maxBroj = broj
+
+print("Najcesci broj je ", maxBroj)
+print("Ponovio je se ", maxPon," puta")
