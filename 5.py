@@ -83,7 +83,7 @@ print("Broj parnih je ",brojacP,",a neparnih je ", brojacN)
 """
 Napiši program koji:
 generira listu od 40 brojeva (0–20) i računa i ispisuje sumu svih brojeva većih od 10
-"""
+
 
 import random
 
@@ -100,3 +100,45 @@ for broj in lista:
         zbroj += broj
 
 print("Suma je ", zbroj)
+"""
+"""
+Napiši program koji: generira listu od 20 brojeva (1–50) ispisuje: najmanji broj najveći broj
+
+
+import random
+
+lista = []
+
+for i in range(20):
+    lista.append(random.randint(1,50))
+
+print("Lista: ",lista)
+
+min=lista[0]
+max=lista[0]
+
+for broj in lista:
+    if broj > max:
+        max = broj
+    if broj < min:
+        min = broj
+
+print("Najveci broj je ",max,",a najmanji ",min)"""
+
+"""
+Napiši program koji: generira listu od 50 brojeva (0–10) za svaki broj ispisuje koliko se puta pojavljuje
+"""
+
+import random
+
+lista = []
+
+for i in range(50):
+    lista.append(random.randint(0,10))
+print("Lista: ",lista)
+
+
+for broj in range(1,12):
+    brojac = lista.count(broj)
+
+    print(broj, "se ponavlja ", brojac, " puta.")
