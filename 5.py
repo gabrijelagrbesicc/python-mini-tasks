@@ -31,21 +31,21 @@ for broj in range(21):
 
 """
 Napiši program koji:
-generira listu od 100 brojeva (1–10) pronalazi i ispisuje broj koji se najviše puta pojavljuje"""
+generira listu od 100 brojeva (1–10) pronalazi i ispisuje broj koji se najviše puta pojavljuje
 
 import random
 
 lista = []
 
 for i in range(100):
-    lista.append(random.randint(0,10))
+    lista.append(random.randint(1,10))
 
 print("Lista: ", lista)
 
 maxBroj=0
 maxPon=0
 
-for broj in range(11):
+for broj in range(1,11):
     brojac = lista.count(broj)
 
     if(brojac > maxPon):
@@ -54,3 +54,49 @@ for broj in range(11):
 
 print("Najcesci broj je ", maxBroj)
 print("Ponovio je se ", maxPon," puta")
+"""
+"""
+Napiši program koji:
+generira listu od 30 brojeva (1–100) ispisuje:
+koliko ima parnih, akoliko ima neparnih
+"""
+""""
+import random
+
+lista = []
+
+for i in range(30):
+    lista.append(random.randint(1,100))
+
+print("Lista: ",lista)
+
+brojacP = 0
+brojacN = 0
+for broj in lista:
+    if(broj % 2 == 0):
+        brojacP = brojacP + 1
+    else:
+        brojacN = brojacN + 1
+
+print("Broj parnih je ",brojacP,",a neparnih je ", brojacN)
+"""
+"""
+Napiši program koji:
+generira listu od 40 brojeva (0–20) i računa i ispisuje sumu svih brojeva većih od 10
+"""
+
+import random
+
+lista = []
+
+for i in range(40):
+    lista.append(random.randint(0,20))
+print("Lista: ", lista)
+
+zbroj=0
+
+for broj in lista:
+    if broj > 10:
+        zbroj += broj
+
+print("Suma je ", zbroj)
