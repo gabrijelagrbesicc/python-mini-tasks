@@ -127,7 +127,6 @@ print("Najveci broj je ",max,",a najmanji ",min)"""
 
 """
 Napiši program koji: generira listu od 50 brojeva (0–10) za svaki broj ispisuje koliko se puta pojavljuje
-"""
 
 import random
 
@@ -138,7 +137,41 @@ for i in range(50):
 print("Lista: ",lista)
 
 
-for broj in range(1,12):
+for broj in range(1,11):
     brojac = lista.count(broj)
 
-    print(broj, "se ponavlja ", brojac, " puta.")
+    print(broj, "se ponavlja ", brojac, " puta.")"""
+
+"""
+Napiši program koji: generira listu od 30 brojeva (1–100) pravi novu listu koja sadrži samo brojeve: veće od 50 ispisuje novu listu
+
+import random
+
+lista = []
+nova = []
+
+for i in range(30):
+    lista.append(random.randint(1,100))
+print("Lista: ", lista)
+
+for broj in lista:
+    if broj>50:
+        nova.append(broj)
+
+print("Nova lista: ",nova)"""
+
+"""
+Napiši program koji: generira listu od 10 brojeva (1–20) ispisuje: originalnu listu listu obrnutim redoslijedom
+"""
+
+import random
+
+lista = []
+
+for i in range(10):
+    lista.append(random.randint(1,20))
+print("Lista: ",lista)
+
+obrnuta = lista[::-1]
+print("Obrnuta lista: ",obrnuta)
+
