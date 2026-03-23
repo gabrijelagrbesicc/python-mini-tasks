@@ -177,12 +177,12 @@ print(rez)"""
 
 """
 Napiši funkciju koja zamjenjuje: ime -> visina u: visina -> ime
-"""
+
 
 osobe = {
     "Pero Peric":175,
     "Marko Markic":180,
-    "Jure Juric":165,
+    "Jure Juric":180,
     "Marija Maric":190
 }
 
@@ -193,4 +193,87 @@ def zamijeni(osobe):
     return novi
 
 rez = zamijeni(osobe)
-print(rez)
+print(rez)"""
+
+"""
+Ako dvije osobe imaju istu visinu: ispiši te visine
+
+osobe = {
+    "Pero Peric":175,
+    "Marko Markic":180,
+    "Jure Juric":180,
+    "Marija Maric":190
+}
+
+def dupli(osobe):
+    duplikati=[]
+
+    for visina in osobe.values():
+        if list(osobe.values()).count(visina)>1 and visina not in duplikati:
+            duplikati.append(visina)
+    return duplikati
+
+print(dupli(osobe))"""
+
+"""
+Napiši funkciju koja: ispisuje osobe sortirane po visini
+
+osobe = {
+    "Pero Peric":175,
+    "Marko Markic":180,
+    "Jure Juric":180,
+    "Marija Maric":190
+}
+
+def sortiranje(osobe):
+    lista = list(osobe.items())
+    lista.sort(key=lambda x: x[1], reverse=True)
+    return lista
+
+print(sortiranje(osobe))"""
+
+"""
+Vrati osobe koje su: veće od 170 i ime im sadrži slovo "a"
+
+
+osobe = {
+    "Pero Peric":175,
+    "Marko Markic":180,
+    "Jure Juric":180,
+    "Marija Maric":190
+}
+    
+def nova(osobe):
+    novi={}
+
+    for ime,visina in osobe.items():
+        if visina>170 and "a" in ime:
+            novi[ime] = visina
+    return novi
+
+print(nova(osobe))"""
+
+"""
+Ako se visine ponavljaju: pronađi visinu koja se najviše pojavljuje
+"""
+
+osobe = {
+    "Pero Peric":175,
+    "Marko Markic":180,
+    "Jure Juric":180,
+    "Marija Maric":190
+}
+
+def najcesca(osobe):
+    najcescaVisina=None
+    maxBroj=0
+
+    for visina in osobe.values():
+        brojac = list(osobe.values()).count(visina)
+
+        if brojac>maxBroj:
+            maxBroj = brojac
+            najcescaVisina = visina
+    return najcescaVisina
+
+print(najcesca(osobe))
