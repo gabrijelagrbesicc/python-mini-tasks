@@ -8,7 +8,7 @@ prosječna ocjena je 3.0, 'marko' ima ocjene 5, 4 i prosječna ocjena je 4.0, 'a
 ocjene 2, 3, 4 i prosječna ocjena je 3.0.
  Izlazni rječnik će biti {3: ['ana', 'ivan'], 4: ['marko']} jer 'ivan' i 'ana' imaju prosjek 3.0, a
 'marko' prosjek 4 
-"""
+
 
 ocjene_studenata = {
     'ivan': (3, 2, 4),
@@ -27,4 +27,30 @@ for student, ocjene in ocjene_studenata.items():
 for studenti in prosjek_rjecnik.values():
     studenti.sort()
 
-print(prosjek_rjecnik)
+print(prosjek_rjecnik)"""
+
+"""
+Napravi novi rječnik gdje će ključevi biti zadnje slovo imena, a vrijednosti lista zaposlenika koji imaju to slovo na kraju imena.
+Lista zaposlenika treba biti sortirana po abecedi.
+"""
+
+zaposlenici = {
+    'Ana': 3000,
+    'Ivan': 3500,
+    'Marko': 4000,
+    'Lana': 3200,
+    'Maja': 3100
+}
+
+novi = {}
+
+for ime in zaposlenici:
+    zadnjeSlovo = ime[-1]
+    if zadnjeSlovo not in novi:
+        novi[zadnjeSlovo] = []
+    novi[zadnjeSlovo].append(ime)
+
+for slovo in novi:
+    novi[slovo].sort()
+
+print(novi)
