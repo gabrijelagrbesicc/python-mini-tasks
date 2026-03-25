@@ -57,7 +57,7 @@ print(novi)"""
 """
 Napravi rječnik gdje su ključevi 'parni' ili 'neparni' ovisno o zaokruženom prosjeku ocjena, a vrijednosti su liste učenika koji imaju prosjek u toj kategoriji.
 Liste treba sortirati po abecedi.
-"""
+
 
 ocjeneS = {
     'Ivan': [3,4,5],
@@ -82,5 +82,92 @@ for ime,ocjene in ocjeneS.items():
 
 for o in novi:
     novi[o].sort()
+
+print(novi)"""
+
+"""
+Podijeli proizvode u tri kategorije:
+'jeftino' (< 3 kn)
+'srednje' (3–5 kn)
+'skupo' (> 5 kn)
+Napravi rječnik gdje su ključevi kategorije, a vrijednosti lista proizvoda u toj kategoriji, sortirana po abecedi.
+
+
+proizvodi = {
+    'mlijeko': 2.5,
+    'kruh': 1.2,
+    'sir': 3.0,
+    'jaja': 4.5,
+    'maslac': 5.0,
+    'jogurt' : 6.0
+}
+
+novi = {}
+
+for proizvod,cijena in proizvodi.items():
+    if cijena < 3:
+        if "jeftino" not in novi:
+            novi["jeftino"] = []
+        novi['jeftino'].append(proizvod)
+    elif 3<=cijena<=5:
+        if "srednje" not in novi:
+            novi["srednje"] = []
+        novi['srednje'].append(proizvod)
+    else:
+        if "skupo" not in novi:
+            novi["skupo"] = []
+        novi['skupo'].append(proizvod)
+
+for kljuc in novi:
+    novi[kljuc].sort()
+
+print(novi)"""
+
+"""
+Napravi rječnik gdje su ključevi prvo slovo imena, a vrijednosti lista imena koja počinju tim slovom, sortirana po abecedi.
+
+studenti = {
+    'Ana': 4,
+    'Ivan': 5,
+    'Marko': 3,
+    'Maja': 5,
+    'Lana': 4
+}
+
+novi = {}
+
+for ime,ocjena in studenti.items():
+    prvoSlovo = ime[:1]
+    if prvoSlovo not in novi:
+        novi[prvoSlovo] = []
+    novi[prvoSlovo].append(ime)
+
+for kljuc in novi:
+    novi[kljuc].sort()
+
+print(novi)"""
+
+"""
+Napravi rječnik gdje su ključevi duljina riječi, a vrijednosti lista riječi te duljine, sortirana po abecedi.
+"""
+
+rijeci = {
+    'sunce': 'sun',
+    'mjesec': 'moon',
+    'zvijezda': 'star',
+    'planina': 'mountain',
+    'klanins': 'dafjao'
+}
+
+novi = {}
+
+for rijec in rijeci:
+    kljuc = len(rijec)
+    if kljuc not in novi:
+        novi[kljuc] = []
+    novi[kljuc].append(rijec)
+
+for k in novi:
+    novi[k].sort()
 
 print(novi)
