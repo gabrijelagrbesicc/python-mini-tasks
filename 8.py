@@ -101,7 +101,7 @@ rjecnik = {
 
 for broj in lista:
     if broj > 50:
-        rjecnik["veciOd50"].append(broj)
+        rjecnik["veciOd50"].append(broj) #dodajemo u listu pod kljucem veciOd50"
     else:
         rjecnik["manjiOd50"].append(broj)
 
