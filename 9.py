@@ -149,7 +149,6 @@ print(novi)"""
 
 """
 Napravi rječnik gdje su ključevi duljina riječi, a vrijednosti lista riječi te duljine, sortirana po abecedi.
-"""
 
 rijeci = {
     'sunce': 'sun',
@@ -166,6 +165,30 @@ for rijec in rijeci:
     if kljuc not in novi:
         novi[kljuc] = []
     novi[kljuc].append(rijec)
+
+for k in novi:
+    novi[k].sort()
+
+print(novi)"""
+
+"""
+Napravi rječnik gdje su ključevi ocjene, a vrijednosti liste učenika koji imaju tu ocjenu, sortirane po abecedi.
+"""
+
+učenici = {
+    'Ivan': 4,
+    'Ana': 5,
+    'Marko': 3,
+    'Maja': 5,
+    'Lana': 4
+}
+
+novi = {}
+
+for ime, ocjena in učenici.items():
+    if ocjena not in novi:
+        novi[ocjena] = []
+    novi[ocjena].append(ime)
 
 for k in novi:
     novi[k].sort()
