@@ -32,7 +32,6 @@ print(prosjek_rjecnik)"""
 """
 Napravi novi rječnik gdje će ključevi biti zadnje slovo imena, a vrijednosti lista zaposlenika koji imaju to slovo na kraju imena.
 Lista zaposlenika treba biti sortirana po abecedi.
-"""
 
 zaposlenici = {
     'Ana': 3000,
@@ -52,5 +51,36 @@ for ime in zaposlenici:
 
 for slovo in novi:
     novi[slovo].sort()
+
+print(novi)"""
+
+"""
+Napravi rječnik gdje su ključevi 'parni' ili 'neparni' ovisno o zaokruženom prosjeku ocjena, a vrijednosti su liste učenika koji imaju prosjek u toj kategoriji.
+Liste treba sortirati po abecedi.
+"""
+
+ocjeneS = {
+    'Ivan': [3,4,5],
+    'Ana':[5,5,4],
+    'Marko':[2,3,3],
+    'Lana':[4,4,4]
+}
+
+novi = {}
+
+for ime,ocjene in ocjeneS.items():
+    prosjek = round(sum(ocjene) / len(ocjene))
+    if prosjek % 2 == 0:
+        if "parni" not in novi:
+            novi["parni"] = []
+        novi['parni'].append(ime)
+    else:
+        if "neparni" not in novi:
+            novi["neparni"] = []
+        novi["neparni"].append(ime)
+
+
+for o in novi:
+    novi[o].sort()
 
 print(novi)
